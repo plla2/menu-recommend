@@ -6,28 +6,32 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const [data, setData] = useState([]);
-  const [lat, setLat] = useState([]);
-  const [lon, setLon] = useState([]);
+  // const [lat, setLat] = useState([]);
+  // const [lon, setLon] = useState([]);
 
   const key = process.env.REACT_APP_WEATHER_API_KEY;
-  // const url =https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
-  useEffect(() => {
-    const fetchData = async () => {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setLat(position.coords.latitude);
-        setLon(position.coords.longitude);
-      });
+  // const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=61d547e6c45af057f6f6ac325576f8fb`;
 
-      await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
-      )
-        .then((res) => res.json())
-        .then((result) => {
-          setData(result);
-        });
-    };
-    fetchData();
-  }, [lat, lon]);
+  // useEffect(() => {
+  const getCurrentLocation = () => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      // console.log("현재위치:", lat, lon);
+      getWeatherByCurrentLocation(lat, lon);
+    });
+  };
+
+  const getWeatherByCurrentLocation = async (lat, lon) => {
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+    let response = await fetch(url);
+    let result = await response.json();
+    setData(result);
+    // console.log(data);
+  };
+  useEffect(() => {
+    getCurrentLocation();
+  }, []);
 
   return (
     <Container className="Home">

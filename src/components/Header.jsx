@@ -5,7 +5,7 @@ import styled from "styled-components";
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const mediaQuery = window.matchMedia("(max-width :680px)").matches;
-  console.log(mediaQuery);
+  // console.log(mediaQuery);
 
   const handleClick = (e) => {
     if (!e.target.classList.contains("display")) {
