@@ -61,4 +61,12 @@ const getWeatherByCurrentLocation = async (lat, lon) => {
   
   ## 🖥️ 실행화면
   첫 실행 화면 </br></br>
-  
+  <img width="800" alt="스크린샷 2023-02-10 오후 7 21 30" src="https://user-images.githubusercontent.com/120915990/218068967-60c8549d-30af-4740-9784-e4c209855524.png"></br></br> 지역별 음식추천</br></br><img width="800" alt="스크린샷 2023-02-10 오후 6 48 42" src="https://user-images.githubusercontent.com/120915990/218069361-6c42100b-f718-4578-8157-583eabc7e323.png"></br></br>상황별 음식추천</br></br><img width="800" alt="스크린샷 2023-02-10 오후 6 48 56" src="https://user-images.githubusercontent.com/120915990/218069357-0313599b-111b-4806-ad04-c7cdf0e7330e.png"></br></br>재료검색 음식추천</br></br><img width="800" alt="스크린샷 2023-02-10 오후 6 49 10" src="https://user-images.githubusercontent.com/120915990/218069338-c510809f-9a52-41d3-a05c-f8c5e9cae0c0.png"></br></br>랜덤 음식추천</br></br>
+<img width="800" alt="스크린샷 2023-02-10 오후 7 36 25" src="https://user-images.githubusercontent.com/120915990/218070955-af4f9a82-1aa9-450d-b807-f0de9b98d46a.png">
+</br></br>음식 상세정보,레시피</br></br><img width="800" alt="스크린샷 2023-02-10 오후 7 34 14" src="https://user-images.githubusercontent.com/120915990/218070528-d697ce6b-7eb4-4e6f-8dba-0597ded209c4.png">
+
+
+
+
+
+
