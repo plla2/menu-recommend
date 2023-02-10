@@ -72,11 +72,11 @@ export default function Random() {
       <div className="change absolute" onClick={chooseRandom}>
         <svg
           stroke="currentColor"
-          fill="currentColor"
+          fill="none"
           strokeWidth="0"
-          viewBox="0 0 1024 1024"
-          height="2.8rem"
-          width="2.8rem"
+          viewBox="0 0 24 24"
+          height="2.8em"
+          width="2.8em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -107,10 +107,10 @@ export default function Random() {
             <li key={index}>{i[1]}</li>
           ))}
           measures={measuresArr.map((m, index) => (
-            <li key={index}>m{[1]}</li>
+            <li key={index}>{m[1]}</li>
           ))}
           area={recipe.strArea}
-          Category={recipe.strCategory}
+          category={recipe.strCategory}
           tags={recipe.strTags ? <span>{tags}</span> : ""}
           youtube={recipe.strYoutube}
           instructions={recipe.strInstructions}
@@ -126,7 +126,7 @@ const Container = styled.div`
   height: 100%;
   position: relative;
   padding: 3rem 10% 5rem;
-  .heading {
+  .headings {
     margin-top: 8rem;
     gap: 2rem;
     h1 {
