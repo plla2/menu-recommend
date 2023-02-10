@@ -152,7 +152,7 @@ const Container = styled.div`
       color: var(--yellow);
     }
   }
-  @media screen and(max-width: 760px) {
+  @media screen and(max-width: 680px) {
     flex-direction: column;
     gap: 2rem;
     div {
@@ -161,7 +161,6 @@ const Container = styled.div`
     }
     h1 {
       width: 100%;
-      margin-left: ;
     }
   }
 `;

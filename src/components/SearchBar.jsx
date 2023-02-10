@@ -29,4 +29,32 @@ export default function SearchBar(props) {
     </Container>
   );
 }
-const Container = styled.div``;
+const Container = styled.div`
+  height: 3rem;
+  input {
+    width: 50%;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: solid 2px black;
+  }
+  button {
+    height: 100%;
+    width: 3rem;
+    border-radius: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    width: 100%;
+    input {
+      width: calc(100% - 3rem);
+    }
+  }
+`;
