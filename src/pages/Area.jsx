@@ -24,6 +24,19 @@ export default function Area() {
     setCount(count + 1);
   };
 
+  const url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${value}`;
+  console.log(url);
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setDishes(data.meals);
+        console.log(data.meals);
+        console.log(dishes);
+      })
+      .catch((err) => console.log(err));
+  }, [count, dishes, url]);
+
   return (
     <Container className="Area flex-column">
       <Choose
