@@ -18,7 +18,7 @@ export default function Ingredients() {
       })
       .catch((err) => console.log(err));
   }, [input, url]);
-  console.log(recipe);
+  // console.log(recipe);
 
   const handleChange = (e) => {
     setInput(e.target.value);

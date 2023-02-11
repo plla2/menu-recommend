@@ -12,7 +12,7 @@ export default function Dish(props) {
     fetch(idUrl)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setDish(data.meals[0]);
       });
   }, [idUrl]);

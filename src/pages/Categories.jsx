@@ -32,8 +32,8 @@ export default function Categories() {
       .then((res) => res.json())
       .then((data) => {
         setDishes(data.meals);
-        console.log(data.meals);
-        console.log(dishes);
+        // console.log(data.meals);
+        // console.log(dishes);
       })
       .catch((err) => console.log(err));
     // eslint-disable-next-line react-hooks/exhaustive-deps

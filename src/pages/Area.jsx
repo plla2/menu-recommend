@@ -14,7 +14,7 @@ export default function Area() {
     fetch(areaUrl)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.meals);
+        // console.log(data.meals);
         setAreas(data.meals);
       });
   }, []);
@@ -25,14 +25,15 @@ export default function Area() {
   };
 
   const url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${value}`;
-  console.log(url);
+  // console.log(url);
+
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setDishes(data.meals);
-        console.log(data.meals);
-        console.log(dishes);
+        // console.log(data.meals);
+        // console.log(dishes);
       })
       .catch((err) => console.log(err));
   }, [count, dishes, url]);

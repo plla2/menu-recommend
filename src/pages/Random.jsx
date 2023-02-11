@@ -15,12 +15,12 @@ export default function Random() {
     fetch(randomUrl)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setRecipe(data.meals[0]);
       });
   }, [count]);
 
-  console.log(recipe);
+  // console.log(recipe);
 
   const Arr = Object.entries(recipe);
   const ingredientsArr = Arr.filter(
